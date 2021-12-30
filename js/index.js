@@ -1,18 +1,19 @@
 // VARIABLES
 let employees = [];
-let urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture,
-email, location, phone, dob &noinfo &nat=US`;
+let urlAPI = `https://randomuser.me/api/?results=12&nat=US`;
 let gridContainer = document.querySelector(".grid-container");
 let overlay = document.querySelector(".overlay");
 let modalContainer = document.querySelector(".modal-content");
 let modalClose = document.querySelector(".modal-close");
 
+//fetch information from API
 fetch(urlAPI)
   .then((res) => res.json())
   .then((res) => res.results)
   .then(displayEmployees)
   .catch((err) => console.log(err));
 
+// loops through employee data and adds content to the page through a template literal statement.
 function displayEmployees(employeeData) {
   let employees = employeeData;
   let employeeHTML = "";
@@ -48,8 +49,9 @@ function displayModal(index) {
 
   let date = new Date(dob.date);
 
-  let modalHTML = `
+  let modalHTML = `<div>
         <img class="avatar" src="${picture.large}" />
+        </div>
         <div class="text-container">
         <h2 class="name">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
@@ -63,6 +65,7 @@ function displayModal(index) {
   `;
   overlay.classList.remove("hidden");
   modalContainer.innerHTML = modalHTML;
+  modalContainer.setAttribute("data-index", index);
 }
 
 gridContainer.addEventListener("click", (e) => {
