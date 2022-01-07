@@ -1,6 +1,6 @@
 // VARIABLES
 let employees = [];
-let urlAPI = `https://randomuser.me/api/?results=12&nat=US`;
+let urlAPI = `https://randomuser.me/api/?results=12&inc=picture,name,email,location,phone,dob&noinfo&nat=US`;
 let gridContainer = document.querySelector(".grid-container");
 let overlay = document.querySelector(".overlay");
 let modalContainer = document.querySelector(".modal-content");

@@ -1,7 +1,65 @@
 body {
   position: relative;
+  margin: auto;
+  background-color: whitesmoke;
 }
-overlay {
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  color: black;
+  line-height: 1.15;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.25rem;
+}
+
+main,
+header {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  color: grey;
+  line-height: normal;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -29,4 +87,24 @@ overlay {
 
 .hidden {
   display: none;
+}
+
+hr {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: normal;
+}
+
+button {
+  color: white;
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  margin: auto;
 }
