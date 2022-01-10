@@ -15,7 +15,7 @@ fetch(urlAPI)
 
 // loops through employee data and adds content to the page through a template literal statement.
 function displayEmployees(employeeData) {
-  let employees = employeeData;
+  employees = employeeData;
   let employeeHTML = "";
   employees.forEach((employee, index) => {
     let name = employee.name;

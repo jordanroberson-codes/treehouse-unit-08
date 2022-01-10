@@ -55,12 +55,12 @@ p {
 
 .avatar {
   border-radius: 50%;
-  max-width: 50%;
+  max-width: 75%;
   padding-right: 20px;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -70,18 +70,19 @@ p {
 
 .modal {
   width: 375px;
-  margin: 0 auto;
+  margin: 20% auto;
   text-align: center;
   padding: 30px 20px;
   position: relative;
   border: 1px solid #778;
   border-radius: 5px;
+  background-color: white;
 }
 
 .modal-close {
   position: absolute;
   right: 15px;
-  top: 5px;
+  top: 15px;
   cursor: pointer;
 }
 
@@ -107,4 +108,10 @@ button {
   border: none;
   border-radius: 5px;
   margin: auto;
+  padding: 1em;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(59, 157, 174);
 }
